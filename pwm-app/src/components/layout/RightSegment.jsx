@@ -5,6 +5,7 @@ import './RightSegment.css'
 export default function RightSegment(props) {
 
     const [sortBy, SetSortBy] = useState('Cheapest');
+    var loading = false;
 
     const SortByHandler = (event) => {
         SetSortBy(event.target.value);
@@ -16,6 +17,7 @@ export default function RightSegment(props) {
         else{items=props.items}
         
         if(items){
+            loading = false;
         switch(sortBy) {
             case 'Cheapest':
                items.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
@@ -35,9 +37,13 @@ export default function RightSegment(props) {
                 default:;
           }
         }else{
-                return (
-                    <h2>Loading...</h2>
-                ) 
+           loading = true;
+           return(
+            <div className='loader-segment' style={{
+                display: loading ? 'block' : 'none',
+            }}></div>
+           )
+           
             }
     }
 

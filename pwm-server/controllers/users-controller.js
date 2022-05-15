@@ -97,7 +97,7 @@ const login = async (req, res, next) => {
                     'Invalid userName or password',
                     401
                 );
-                res.status(401).json(error);
+                res.json(error);
                 return next(error);
             }
     }

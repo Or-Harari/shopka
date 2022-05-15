@@ -19,6 +19,7 @@ export default function SignUp(props) {
 const [name, setName] = useState('');
 const [password, SetPassword] = useState('');
 const [confirmPassword, SetConfirmPassword] = useState('');
+const [loading, SetLoading] = useState(false);
 
 const [error, setError] = useState(false);
 const [errorDetaild, SetErrorDetails] = useState('');
@@ -67,6 +68,7 @@ function SignUp(){
             password: password
         }
         setError(false);
+        SetLoading(true)
         fetch(fetchUrl, {
             method:'POST',
             headers:{
@@ -77,18 +79,21 @@ function SignUp(){
             .then(responseData => {
                 console.log(response)
                 if(!response.ok){
-                    throw new Error(responseData)
+                    console.log(responseData.message)
+                    throw Error(responseData.message)
                 }
                 else if(authMode === 'signUp'){
-                     alert('You have succesfully Signed Up!')
+                     SetLoading(false)
+                     props.GetUser(responseData)
                      return handleClose();
                 }
                 else{
+                    SetLoading(false)
                     props.GetUser(responseData);
                     return handleClose();
                 }
             })
-            .catch(err => {SetErrorDetails(err.message); setError(true)}))}    
+            .catch((err) => {SetErrorDetails(err.message); setError(true);SetLoading(false)}))}    
              
 }
 
@@ -114,7 +119,7 @@ return (
 <div
 className="error"
 style={{
-display: error ? '' : 'none',
+display: error ? 'block' : 'none',
 }}>
 <h1>{errorDetaild}</h1>
 </div>
@@ -125,6 +130,10 @@ return (
 <div ref={formRef} className="main-form">
     <button onClick={()=>{handleClose()}} className='esc-button'>X</button>
 {title()}
+<div className='loader'
+    style={{
+    display: loading ? 'block' : 'none',
+}}></div>
 <div className="messages">
 {errorMessage()}
 </div>
