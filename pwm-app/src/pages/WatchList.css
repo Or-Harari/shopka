@@ -1,0 +1,30 @@
+.items-watch-main{
+    position: relative;
+    width: 50%;
+    margin: auto;
+}
+.item-watch-div{
+    display: inline-block;
+}
+.span-watch{
+    position: relative;
+    left: 5px;
+}
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.delete-button{
+    position: relative;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: 600;
+}
+.delete-button:hover{
+    cursor: pointer;
+}

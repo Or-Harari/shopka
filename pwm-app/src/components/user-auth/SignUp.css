@@ -1,0 +1,68 @@
+.main-form {
+    position: absolute;
+    display: inline-block;
+    z-index: 5;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.204);
+    border-radius: 10px;
+    background-color: rgba(255, 246, 237, 0.836);
+    width: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 50px;
+    box-shadow: 3px 4px rgba(0, 0, 0, 0.223);
+    }
+.form-input{
+    display: block;
+    padding: 6px;
+    margin: auto;
+    margin-bottom: 6px;  
+}
+.headline{
+        font-size: 40px;
+        font-weight: 200;
+        color: rgba(0, 0, 0, 0.432);
+        font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn{
+    color: rgb(255, 255, 255);
+    background-color: rgb(67, 135, 67);
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: larger;
+    display: block;
+    padding:10px;
+    margin: 30px auto;
+}
+.btn:hover{
+        background-color: rgb(73, 155, 73);
+}
+.btn:active{
+        background-color: rgb(67, 135, 67);    }
+    
+.error{
+    color: red;
+    font-size: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.label{
+    position: relative;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 3px;
+}
+.esc-button{
+    position: absolute;
+    right: 0;
+    margin: 5px;
+    background-color: transparent;
+    border: 2px solid gray;
+    border-radius: 3px;
+    font-size: 20px;
+    color: red;
+}
+.esc-button:hover{
+    cursor: pointer;
+}

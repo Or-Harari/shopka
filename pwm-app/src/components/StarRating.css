@@ -1,0 +1,11 @@
+
+.start-main{
+    display: flex;
+    
+}
+.radio{
+    display: none;
+}
+label{
+    margin-right: 2px;
+}

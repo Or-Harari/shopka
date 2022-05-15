@@ -1,0 +1,16 @@
+.watch-main{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+}
+.page-name{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:400;
+    position: relative;
+    right: 20px;
+}
+.title-watch{
+    position: relative;
+    left: 50px;
+    cursor: pointer;
+}

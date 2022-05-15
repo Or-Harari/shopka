@@ -1,0 +1,28 @@
+.item-div{
+    position: relative;
+    padding: 18px;
+    justify-content: space-between;
+    display: inline-block;
+    margin: 10px;
+    
+
+}
+.rate-div{
+    display: flex;
+}
+.item-watch-button{
+    position: absolute;
+    right: 0;
+}
+.item-watch-button:hover{
+        background-color: rgba(149, 149, 255, 0.786);
+        color: white;
+        cursor: pointer;
+}
+.image{
+    width: 140px;
+    height: 140px;
+}
+.item-name{
+    color: rgba(0, 0, 0, 0.475);
+}
